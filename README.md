@@ -1,6 +1,7 @@
-# Real-Time Edge Detection Viewer 
+# Real-Time Edge Detection Viewer
 
 This is an android app that was developed in Java using OpenCV. The two options are shown when you open the app:
+
 1. Open Camera - This shows us the regular camera view.
 2. Show Processed Output - This shows us the real-time image after Canny-edge detection.
 
@@ -16,6 +17,7 @@ This is an android app that was developed in Java using OpenCV. The two options 
 ## 📷 Screenshots
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home Page &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Raw Image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Processed Image
+
 <img src="images/Main.jpg" height=500> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/Pro.jpg" height=500> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/Edge.jpg" height=500>
 
 ## ⚙️ Setup Instructions
@@ -29,25 +31,32 @@ This is an android app that was developed in Java using OpenCV. The two options 
 ### 2. 📂 Clone the Repository
 
 ```bash
-git clone https://github.com/namanrox/Real-Time-Edge-Detection-Viewer.git
-cd Real-Time-Edge-Detection-Viewer
+git clone https://github.com/2k22csaiml/Project-Assignment.git
+cd Real-Time-Edge-Detection-Viewer-main
 ```
 
 ### 3. 🧰 OpenCV SDK Integration
+
 - Download the OpenCV Android SDK
 - Extract the SDK and place it in:
+
 ```bash
 app/src/main/jniLibs/OpenCV/
 ```
+
 - Inside CMakeLists.txt:
+
 ```bash
 set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/OpenCV/sdk/native/jni)
 find_package(OpenCV REQUIRED)
 ```
+
 ### 4. 🏗️ Build and Run
+
 - Enable NDK and CMake in Project Structure > SDK Tools
 - Plug in your Android device or use an emulator with Camera support
 - Build and run via Android Studio or:
+
 ```bash
 ./gradlew assembleDebug
 ```
@@ -70,6 +79,3 @@ find_package(OpenCV REQUIRED)
 - OpenGL Renderer:
   - Renders processed image as texture in real time
   - Ensures smooth rendering at 15+ FPS
-
-
-
